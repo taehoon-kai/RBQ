@@ -1,0 +1,1 @@
+/home/taehoon/RBQ/ros2/build/rbq_msgs/rosidl_typesupport_fastrtps_c/rbq_msgs/msg/detail/battery_state__rosidl_typesupport_fastrtps_c.h

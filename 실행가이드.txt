@@ -1,0 +1,9 @@
+# 1. 워크스페이스로 이동하여 빌드하고 환경을 새로고침합니다.
+cd ~/ros2_ws && colcon build --symlink-install && source install/setup.bash
+
+# 2. RBQ 스크립트 폴더로 이동하여 모든 옵션을 켜고 시뮬레이션을 실행합니다.
+cd ~/RBQ && bash scripts/sim.bash --vision --ros
+
+# 제어권을 뺏어오고(switchControlMode), 로봇의 시동을 겁니다(autoStart).
+ros2 topic pub --once /rbq/motion/switchControlMode std_msgs/msg/Bool "{data: true}" && \
+ros2 topic pub --once /rbq/motion/autoStart std_msgs/msg/Bool "{data: true}"
