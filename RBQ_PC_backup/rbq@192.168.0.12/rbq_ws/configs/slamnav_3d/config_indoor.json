@@ -1,0 +1,109 @@
+{
+	"robot": {
+		"ROBOT_TYPE": "rapid",
+		"ROBOT_SIZE_MIN_X": "-0.75",
+		"ROBOT_SIZE_MAX_X": "0.4",
+		"ROBOT_SIZE_MIN_Y": "-0.25",
+		"ROBOT_SIZE_MAX_Y": "0.25",
+		"ROBOT_SIZE_MIN_Z": "-0.47",
+		"ROBOT_SIZE_MAX_Z": "0.2",
+		"ROBOT_EXTEND_SIZE_MIN_X": "-0.75",
+		"ROBOT_EXTEND_SIZE_MAX_X": "0.6",
+		"ROBOT_EXTEND_SIZE_MIN_Y": "-0.35",
+		"ROBOT_EXTEND_SIZE_MAX_Y": "0.35",
+		"ROBOT_EXTEND_SIZE_MIN_Z": "-0.6",
+		"ROBOT_EXTEND_SIZE_MAX_Z": "0.6",
+		"ROBOT_RADIUS": "0.5",
+		"ROBOT_WHEEL_BASE": "0.6",
+		"ROBOT_FOOT_HEIGHT": "0.0",
+		"ROBOT_LOW_BATTERY": "-1"
+	},
+	"lidar": {
+		"LIDAR_IP": "192.168.1.140",
+		"LIDAR_MIN_RANGE": "1.0",
+		"LIDAR_MAX_RANGE": "100.0",
+   		"LIDAR_TF": "-0.31250, 0.0, 0.105, 0.0, 0.0, -180",
+   		"LIDAR_IMU_TF":"0.006254, -0.011775, 0.007645, 0, 0, 0"
+	},
+  	"cam": {
+		"CAM_TF": "0.38387,0.04775,0.018,-90,0,-90"
+ 	},	
+	"sim": {
+		"SIM_MODE": "0",
+		"MOTOR_LIMIT_V": "1.0",
+		"MOTOR_LIMIT_V_ACC": "1.0",
+		"MOTOR_LIMIT_W": "60",
+		"MOTOR_LIMIT_W_ACC": "180"
+	},
+	"loc": {
+		"LOC_CHECK_DIST": "0.3",
+		"LOC_CHECK_IE": "0.3",
+		"LOC_CHECK_IR": "0.3",		
+    		"LOC_ICP_USE_ODOMETRY": "1",
+    		"LOC_ICP_FUSION_RATIO": "0.3",
+    		"LOC_ICP_COST_THRESHOLD": "3.0",
+		"LOC_ICP_ERROR_THRESHOLD": "0.3",
+		"LOC_ICP_MAX_FEATURE_NUM": "1200"
+	},
+	"mapping": {
+    		"SLAM_ICP_USE_DO_FILTER": "1",
+		"SLAM_ICP_DO_ACCUM_NUM": "3",
+		"SLAM_ICP_DO_ERASE_GAP": "5",
+   		"SLAM_ICP_DO_RANGE": "10.0",
+		"SLAM_ICP_USE_VIEW_FILTER": "0",
+		"SLAM_ICP_VIEW_THRESHOLD": "150",
+   		"SLAM_ICP_USE_ODOMETRY": "1",
+   		"SLAM_ICP_USE_BALANCE_FILTER": "0",
+   		"SLAM_ICP_BALANCE_RATIO": "0.35",
+   		"SLAM_ICP_COST_THRESHOLD": "2.0",
+		"SLAM_ICP_ERROR_THRESHOLD": "0.2",
+		"SLAM_ICP_MAX_FEATURE_NUM": "1000",   		
+		"SLAM_KFRM_USE_LC": "1",
+		"SLAM_KFRM_LC_TRY_DIST_XY": "20.0",
+   		"SLAM_KFRM_LC_TRY_DIST_Z": "5.0",
+		"SLAM_KFRM_LC_TRY_OVERLAP": "0.3",
+    		"SLAM_KFRM_LC_COST_THRESHOLD": "2.0",
+    		"SLAM_KFRM_LC_ERROR_THRESHOLD": "0.1",
+		"SLAM_KFRM_LC_MAX_FEATURE_NUM": "3000",
+ 		"SLAM_KFRM_UPDATE_NUM": "50",
+		"SLAM_KFRM_WINDOW_SIZE": "100",
+		"SLAM_DESKEW_THRESHOLD": "0.2",
+		"SLAM_VOXEL_SIZE": "0.1",
+  		"SLAM_FRAME_STEP": "3",
+    		"SLAM_SURFEL_RANGE": "1.0",
+    		"SLAM_SURFEL_FLATNESS": "0.5",
+    		"SLAM_CHECK_MOVING_DIST": "0.1",
+    		"SLAM_CHECK_MOVING_TH": "3.0"
+	},
+	"obs": {
+		"OBS_AVOID": "0",
+    		"OBS_PREDICT_TIME": "4.0",
+		"OBS_DEADZONE": "2.0",
+		"OBS_EB_MARGIN_X": "0.5",
+		"OBS_EB_MARGIN_Y": "0.5",
+		"OBS_OMPL_MARGIN_X": "0.05",
+		"OBS_OMPL_MARGIN_Y": "0.05",
+    		"OBS_MAP_GRID_SIZE": "0.05",
+    		"OBS_MAP_RANGE": "6.0",
+    		"OBS_MAP_MIN_Z": "-0.3",
+    		"OBS_MAP_MAX_Z": "0.5",
+		"OBS_LOCAL_GOAL_D": "1.0",
+		"OBS_BASE_REMOVE_D": "1.0",
+		"OBS_BASE_REMOVE_R": "0.5",
+		"OBS_MIN_V": "0.3",
+		"OBS_SAFE_MARGIN_X": "0.2",
+		"OBS_SAFE_MARGIN_Y": "0.2"
+		
+	},
+	"control": {
+		"DRIVE_EXTENDED_CONTROL_TIME": "0.5",
+		"DRIVE_GOAL_D": "0.2",
+		"DRIVE_GOAL_TH": "5.0",
+		"DRIVE_GOAL_APPROACH_GAIN": "0.5",
+		"DRIVE_DECEL_RATE": "0.5"
+	},
+	"annotation": {
+		"ANNOT_QA_STEP": "0.5"
+	},
+ 	"LAST_MAP_PATH": "/home/rbq/maps_3d/2025_01_03_17_56_03_817"
+}

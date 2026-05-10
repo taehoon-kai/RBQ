@@ -1,0 +1,1 @@
+/home/rbq/rbq_ws/ros2/build/rbq_msgs/rosidl_generator_py/rbq_msgs/msg/_foot_states_s.c

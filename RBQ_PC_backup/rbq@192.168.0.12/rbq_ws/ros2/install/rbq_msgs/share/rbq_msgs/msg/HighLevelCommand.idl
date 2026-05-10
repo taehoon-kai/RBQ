@@ -1,0 +1,133 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rbq_msgs/msg/HighLevelCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rbq_msgs {
+  module msg {
+    module HighLevelCommand_Constants {
+      @verbatim (language="comment", text=
+        "Fall Mode - Triggered upon unexpected loss of balance")
+      const int8 STATE_FALL = -2;
+      @verbatim (language="comment", text=
+        "Control Off - All actuators disabled")
+      const int8 STATE_OFF = -1;
+      @verbatim (language="comment", text=
+        "Sitting - Low posture, resting on the ground")
+      const int8 STATE_SIT = 0;
+      @verbatim (language="comment", text=
+        "Standing - Neutral posture, ready to walk")
+      const int8 STATE_STAND = 1;
+      @verbatim (language="comment", text=
+        "Aim Mode - Aiming posture for targeting")
+      const int8 STATE_AIM = 2;
+      @verbatim (language="comment", text=
+        "Walk Mode - walking Trot gait")
+      const int8 STATE_WALK = 3;
+      @verbatim (language="comment", text=
+        "Stairs Mode - Stair-adaptive gait using camera sensor")
+      const int8 STATE_STAIRS = 4;
+      @verbatim (language="comment", text=
+        "Wave Mode - walking Walk gait")
+      const int8 STATE_WAVE = 5;
+      @verbatim (language="comment", text=
+        "Run Mode - High-speed gait (if supported)")
+      const int8 STATE_RUN = 6;
+      @verbatim (language="comment", text=
+        "RL Trot - Reinforcement Learning Trot gait")
+      const int8 STATE_RL_TROT = 30;
+      @verbatim (language="comment", text=
+        "RL Front Walk - Reinforcement Learning Front Walk gait")
+      const int8 STATE_RL_FRONT_WALK = 31;
+      @verbatim (language="comment", text=
+        "RL Left Walk - Reinforcement Learning Left Walk gait")
+      const int8 STATE_RL_LEFT_WALK = 33;
+      @verbatim (language="comment", text=
+        "RL Right Walk - Reinforcement Learning Right Walk gait")
+      const int8 STATE_RL_RIGHT_WALK = 34;
+      @verbatim (language="comment", text=
+        "RL Bound - Reinforcement Learning Bound gait")
+      const int8 STATE_RL_BOUND = 35;
+      @verbatim (language="comment", text=
+        "RL Pace - Reinforcement Learning Pace gait")
+      const int8 STATE_RL_PACE = 36;
+      @verbatim (language="comment", text=
+        "RL Pronk - Reinforcement Learning Pronk gait")
+      const int8 STATE_RL_PRONK = 37;
+      @verbatim (language="comment", text=
+        "RL 3Leg HR - Reinforcement Learning 3-Leg gait (Hind Right)")
+      const int8 STATE_RL_3LEG_HR = 38;
+      @verbatim (language="comment", text=
+        "RL 3Leg HL - Reinforcement Learning 3-Leg gait (Hind Left)")
+      const int8 STATE_RL_3LEG_HL = 39;
+      @verbatim (language="comment", text=
+        "RL 3Leg FR - Reinforcement Learning 3-Leg gait (Front Right)")
+      const int8 STATE_RL_3LEG_FR = 40;
+      @verbatim (language="comment", text=
+        "RL 3Leg FL - Reinforcement Learning 3-Leg gait (Front Left)")
+      const int8 STATE_RL_3LEG_FL = 41;
+      @verbatim (language="comment", text=
+        "RL Trot Vision - Reinforcement Learning Trot with Vision")
+      const int8 STATE_RL_TROT_VISION = 42;
+      @verbatim (language="comment", text=
+        "RL Trot Run - Reinforcement Learning Trot Run gait")
+      const int8 STATE_RL_TROT_RUN = 45;
+      @verbatim (language="comment", text=
+        "RL Silent - Reinforcement Learning Silent gait")
+      const int8 STATE_RL_SILENT = 46;
+    };
+    @verbatim (language="comment", text=
+      "gait_state constants")
+    struct HighLevelCommand {
+      @verbatim (language="comment", text=
+        "Message fields" "\n"
+        "ROS message header with timestamp and frame_id")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Command identifier for tracking/logging purposes")
+      string identifier;
+
+      @verbatim (language="comment", text=
+        "Body roll angle in degrees (ZYX Euler angles)")
+      double roll;
+
+      @verbatim (language="comment", text=
+        "Body pitch angle in degrees (ZYX Euler angles)")
+      double pitch;
+
+      @verbatim (language="comment", text=
+        "Body yaw angle in degrees (ZYX Euler angles)")
+      double yaw;
+
+      @verbatim (language="comment", text=
+        "Linear velocity in X direction (m/s)")
+      double vel_x;
+
+      @verbatim (language="comment", text=
+        "Linear velocity in Y direction (m/s)")
+      double vel_y;
+
+      @verbatim (language="comment", text=
+        "Angular velocity around Z axis (rad/s)")
+      double omega_z;
+
+      @verbatim (language="comment", text=
+        "Body height adjustment from default (m)")
+      double delta_body_h;
+
+      @verbatim (language="comment", text=
+        "Foot height adjustment from default (m)")
+      double delta_foot_h;
+
+      @verbatim (language="comment", text=
+        "Target gait state (use constants defined above)")
+      int8 gait_state;
+
+      @verbatim (language="comment", text=
+        "Enable(true)/disable(false) gait transition during command execution")
+      boolean gait_transition;
+    };
+  };
+};

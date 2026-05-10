@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rbq_msgs/msg/FootStates.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rbq_msgs {
+  module msg {
+    module FootStates_Constants {
+      @verbatim (language="comment", text=
+        "Contact constants")
+      const uint8 CONTACT_UNKNOWN = 0;
+      const uint8 CONTACT_MADE = 1;
+      const uint8 CONTACT_LOST = 2;
+    };
+    struct FootStates {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Arrays for 4 legs (FL, FR, RL, RR)" "\n"
+        "Foot position relative to body frame (4 elements)")
+      sequence<geometry_msgs::msg::Point> foot_position_rt_body;
+
+      @verbatim (language="comment", text=
+        "Foot velocity relative to body frame (4 elements)")
+      sequence<geometry_msgs::msg::Point> foot_velocity_rt_body;
+
+      @verbatim (language="comment", text=
+        "Contact state for each foot (4 elements)")
+      sequence<uint8> contact;
+    };
+  };
+};

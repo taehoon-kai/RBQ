@@ -1,0 +1,1 @@
+/home/rbq/rbq_ws/ros2/build/rbq_msgs/ament_cmake_core/rbq_msgsConfig.cmake

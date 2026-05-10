@@ -1,0 +1,129 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rbq_msgs/msg/JointStatus.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rbq_msgs {
+  module msg {
+    struct JointStatus {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Joint Detail Information" "\n"
+        "Connection and Temperature Status" "\n"
+        "Joint connection status (true = connected, false = disconnected)")
+      sequence<boolean> connected;
+
+      @verbatim (language="comment", text=
+        "Board temperature in Celsius")
+      sequence<int8> temperature;
+
+      @verbatim (language="comment", text=
+        "Motor temperature in Celsius")
+      sequence<int8> motor_temp;
+
+      @verbatim (language="comment", text=
+        "Motor Status Flags" "\n"
+        "FET (Field Effect Transistor) status (true = ON, false = OFF)")
+      sequence<boolean> status_fet;
+
+      @verbatim (language="comment", text=
+        "Motor running status (true = running, false = stopped)")
+      sequence<boolean> status_run;
+
+      @verbatim (language="comment", text=
+        "Initialization status (true = initialized, false = not initialized)")
+      sequence<boolean> status_init;
+
+      @verbatim (language="comment", text=
+        "Control mode status (true = position control, false = torque control)")
+      sequence<boolean> status_mod;
+
+      @verbatim (language="comment", text=
+        "Nonius count error (true = error, false = normal)")
+      sequence<boolean> status_non_ctr;
+
+      @verbatim (language="comment", text=
+        "Battery status (true = low battery, false = normal)")
+      sequence<boolean> status_bat;
+
+      @verbatim (language="comment", text=
+        "Calibration status (true = in calibration mode, false = normal)")
+      sequence<boolean> status_calib;
+
+      @verbatim (language="comment", text=
+        "Motor error status (true = error, false = normal)")
+      sequence<boolean> status_mt_err;
+
+      @verbatim (language="comment", text=
+        "JAM error status (true = jammed, false = normal)")
+      sequence<boolean> status_jam;
+
+      @verbatim (language="comment", text=
+        "Over current error (true = over current, false = normal)")
+      sequence<boolean> status_cur;
+
+      @verbatim (language="comment", text=
+        "Big position error (true = large error, false = normal)")
+      sequence<boolean> status_big;
+
+      @verbatim (language="comment", text=
+        "Input error (true = input error, false = normal)")
+      sequence<boolean> status_inp;
+
+      @verbatim (language="comment", text=
+        "FET driver fault error (true = fault, false = normal)")
+      sequence<boolean> status_flt;
+
+      @verbatim (language="comment", text=
+        "Temperature error (true = over temperature, false = normal)")
+      sequence<boolean> status_tmp;
+
+      @verbatim (language="comment", text=
+        "Position limit error - lower bound (true = limit reached, false = normal)")
+      sequence<boolean> status_ps1;
+
+      @verbatim (language="comment", text=
+        "Position limit error - upper bound (true = limit reached, false = normal)")
+      sequence<boolean> status_ps2;
+
+      @verbatim (language="comment", text=
+        "Reserved status bit")
+      sequence<boolean> status_rsvd;
+
+      @verbatim (language="comment", text=
+        "Control Data" "\n"
+        "Reference position in radians")
+      sequence<float> position_ref;
+
+      @verbatim (language="comment", text=
+        "Encoder position in radians")
+      sequence<float> position_enc;
+
+      @verbatim (language="comment", text=
+        "Joint velocity in rad/s")
+      sequence<float> velocity;
+
+      @verbatim (language="comment", text=
+        "Reference torque in Nm")
+      sequence<float> torque_ref;
+
+      @verbatim (language="comment", text=
+        "Motor current in Amperes")
+      sequence<float> current;
+
+      @verbatim (language="comment", text=
+        "Proportional gain (P gain)")
+      sequence<float> kp;
+
+      @verbatim (language="comment", text=
+        "Derivative gain (D gain)")
+      sequence<float> kd;
+
+      @verbatim (language="comment", text=
+        "Joint owner ID (which controller owns this joint)")
+      sequence<int32> owner;
+    };
+  };
+};

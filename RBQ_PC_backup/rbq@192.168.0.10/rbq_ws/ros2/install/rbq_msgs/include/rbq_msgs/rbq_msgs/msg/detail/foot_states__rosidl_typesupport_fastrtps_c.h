@@ -1,0 +1,1 @@
+/home/rbq/rbq_ws/ros2/build/rbq_msgs/rosidl_typesupport_fastrtps_c/rbq_msgs/msg/detail/foot_states__rosidl_typesupport_fastrtps_c.h

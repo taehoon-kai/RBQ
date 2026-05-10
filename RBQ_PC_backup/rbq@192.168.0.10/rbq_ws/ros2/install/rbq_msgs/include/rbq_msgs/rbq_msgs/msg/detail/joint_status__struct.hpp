@@ -1,0 +1,1 @@
+/home/rbq/rbq_ws/ros2/build/rbq_msgs/rosidl_generator_cpp/rbq_msgs/msg/detail/joint_status__struct.hpp

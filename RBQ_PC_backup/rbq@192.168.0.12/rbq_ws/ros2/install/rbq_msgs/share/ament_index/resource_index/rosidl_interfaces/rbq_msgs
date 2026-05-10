@@ -1,0 +1,10 @@
+msg/BatteryState.idl
+msg/BatteryState.msg
+msg/FootStates.idl
+msg/FootStates.msg
+msg/HighLevelCommand.idl
+msg/HighLevelCommand.msg
+msg/JointStatus.idl
+msg/JointStatus.msg
+msg/RobotStatus.idl
+msg/RobotStatus.msg

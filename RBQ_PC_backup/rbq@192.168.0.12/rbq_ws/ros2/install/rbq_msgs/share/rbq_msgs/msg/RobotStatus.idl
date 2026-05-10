@@ -1,0 +1,174 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rbq_msgs/msg/RobotStatus.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rbq_msgs {
+  module msg {
+    module RobotStatus_Constants {
+      @verbatim (language="comment", text=
+        "DOCKING_STATE" "\n"        "(ABORT SEQENCE) MAX Docking retry count rechead (10 times)")
+      const int8 DOCKING_MAX_FAIL_CNT_REACHED = -6;
+      @verbatim (language="comment", text=
+        "(ABORT SEQENCE) Marker rotation angle is more than +-40 degree")
+      const int8 DOCKING_MARKER_POS_INVALID_ROTATION = -5;
+      @verbatim (language="comment", text=
+        "(ABORT SEQENCE) Marker is too far more than 5m")
+      const int8 DOCKING_MARKER_POS_INVALID_TOO_FAR = -4;
+      @verbatim (language="comment", text=
+        "(ABORT SEQENCE) Marker is detected on front side of robot")
+      const int8 DOCKING_MARKER_POS_INVALID_WRONG_DIR = -3;
+      @verbatim (language="comment", text=
+        "(ABORT SEQENCE) Marker not found")
+      const int8 DOCKING_MARKER_NOT_FOUND = -2;
+      @verbatim (language="comment", text=
+        "docking failed --> Auto retry")
+      const int8 DOCKING_FAILED = -1;
+      @verbatim (language="comment", text=
+        "robot is on normal operation")
+      const int8 DOCKING_OPERATION_MODE = 0;
+      @verbatim (language="comment", text=
+        "1st reach to charger by offset")
+      const int8 DOCKING_APPROACH_OFFSET = 1;
+      @verbatim (language="comment", text=
+        "2nd reach to charger")
+      const int8 DOCKING_APPROACH = 2;
+      @verbatim (language="comment", text=
+        "3rd reach to charger with wide stance")
+      const int8 DOCKING_APPROACH_WIDE = 3;
+      @verbatim (language="comment", text=
+        "sitting down to charger")
+      const int8 DOCKING_SIT_DOWN = 4;
+      @verbatim (language="comment", text=
+        "docking success : charger connected")
+      const int8 DOCKING_SUCCESS = 5;
+      @verbatim (language="comment", text=
+        "docking success : charging")
+      const int8 DOCKING_SUCCESS_CHARGING = 6;
+      @verbatim (language="comment", text=
+        "docking success : no_charging")
+      const int8 DOCKING_SUCCESS_NO_CHARGING = 7;
+      @verbatim (language="comment", text=
+        "gait_state constants" "\n"        "Fall Mode - Triggered upon unexpected loss of balance")
+      const int8 STATE_FALL = -2;
+      @verbatim (language="comment", text=
+        "Control Off - All actuators disabled")
+      const int8 STATE_OFF = -1;
+      @verbatim (language="comment", text=
+        "Sitting - Low posture, resting on the ground")
+      const int8 STATE_SIT = 0;
+      @verbatim (language="comment", text=
+        "Standing - Neutral posture, ready to walk")
+      const int8 STATE_STAND = 1;
+      @verbatim (language="comment", text=
+        "Walk Mode - walking Trot gait")
+      const int8 STATE_WALK = 2;
+      @verbatim (language="comment", text=
+        "Aim Mode - Aiming posture for targeting")
+      const int8 STATE_AIM = 3;
+      @verbatim (language="comment", text=
+        "Stairs Mode - Stair-adaptive gait using camera sensor")
+      const int8 STATE_STAIRS = 4;
+      @verbatim (language="comment", text=
+        "Wave Mode - walking Walk gait")
+      const int8 STATE_WAVE = 5;
+      @verbatim (language="comment", text=
+        "Run Mode - High-speed gait (if supported)")
+      const int8 STATE_RUN = 6;
+      @verbatim (language="comment", text=
+        "RL Trot - Reinforcement Learning Trot gait")
+      const int8 STATE_RL_TROT = 30;
+      @verbatim (language="comment", text=
+        "RL Front Walk - Reinforcement Learning Front Walk gait")
+      const int8 STATE_RL_FRONT_WALK = 31;
+      @verbatim (language="comment", text=
+        "RL Left Walk - Reinforcement Learning Left Walk gait")
+      const int8 STATE_RL_LEFT_WALK = 33;
+      @verbatim (language="comment", text=
+        "RL Right Walk - Reinforcement Learning Right Walk gait")
+      const int8 STATE_RL_RIGHT_WALK = 34;
+      @verbatim (language="comment", text=
+        "RL Bound - Reinforcement Learning Bound gait")
+      const int8 STATE_RL_BOUND = 35;
+      @verbatim (language="comment", text=
+        "RL Pace - Reinforcement Learning Pace gait")
+      const int8 STATE_RL_PACE = 36;
+      @verbatim (language="comment", text=
+        "RL Pronk - Reinforcement Learning Pronk gait")
+      const int8 STATE_RL_PRONK = 37;
+      @verbatim (language="comment", text=
+        "RL 3Leg HR - Reinforcement Learning 3-Leg gait (Hind Right)")
+      const int8 STATE_RL_3LEG_HR = 38;
+      @verbatim (language="comment", text=
+        "RL 3Leg HL - Reinforcement Learning 3-Leg gait (Hind Left)")
+      const int8 STATE_RL_3LEG_HL = 39;
+      @verbatim (language="comment", text=
+        "RL 3Leg FR - Reinforcement Learning 3-Leg gait (Front Right)")
+      const int8 STATE_RL_3LEG_FR = 40;
+      @verbatim (language="comment", text=
+        "RL 3Leg FL - Reinforcement Learning 3-Leg gait (Front Left)")
+      const int8 STATE_RL_3LEG_FL = 41;
+      @verbatim (language="comment", text=
+        "RL Trot Vision - Reinforcement Learning Trot with Vision")
+      const int8 STATE_RL_TROT_VISION = 42;
+      @verbatim (language="comment", text=
+        "RL Trot Run - Reinforcement Learning Trot Run gait")
+      const int8 STATE_RL_TROT_RUN = 45;
+      @verbatim (language="comment", text=
+        "RL Silent - Reinforcement Learning Silent gait")
+      const int8 STATE_RL_SILENT = 46;
+    };
+    struct RobotStatus {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Motor control enabled (1 = enabled, 0 = not enabled)")
+      boolean con_start;
+
+      @verbatim (language="comment", text=
+        "Robot is in ready position (1 = ready, 0 = not ready)")
+      boolean ready_pos;
+
+      @verbatim (language="comment", text=
+        "Robot is in ground/sitting position (1 = sitting, 0 = not sitting)")
+      boolean ground_pos;
+
+      @verbatim (language="comment", text=
+        "Force control mode enabled (1 = enabled, 0 = disabled)")
+      boolean force_con;
+
+      @verbatim (language="comment", text=
+        "External joystick connected (1 = connected, 0 = not connected)")
+      boolean ext_joy;
+
+      @verbatim (language="comment", text=
+        "Robot is standing (1 = standing, 0 = not standing)")
+      boolean is_standing;
+
+      @verbatim (language="comment", text=
+        "CAN communication check (1 = success, 0 = failure)")
+      boolean can_check;
+
+      @verbatim (language="comment", text=
+        "Encoder homing status (1 = success, 0 = failure)")
+      boolean find_home;
+
+      @verbatim (language="comment", text=
+        "Current gait mode identifier (returns value defined GAIT_STATE enum)")
+      int8 gait_id;
+
+      @verbatim (language="comment", text=
+        "Fall detection status (1 = robot has fallen, 0 = normal)")
+      boolean is_fall;
+
+      @verbatim (language="comment", text=
+        "Docking process status (returns value defined in DOCKING_STATE enum)")
+      int8 docking_state;
+
+      @verbatim (language="comment", text=
+        "IMU connection status (1 = success, 0 = failure)")
+      boolean imu_success;
+    };
+  };
+};

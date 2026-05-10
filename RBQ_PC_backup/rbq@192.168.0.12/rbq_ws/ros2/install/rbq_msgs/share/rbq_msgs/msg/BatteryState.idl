@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rbq_msgs/msg/BatteryState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rbq_msgs {
+  module msg {
+    module BatteryState_Constants {
+      const uint8 STATUS_UNKNOWN = 0;
+      const uint8 STATUS_MISSING = 1;
+      const uint8 STATUS_CHARGING = 2;
+      const uint8 STATUS_DISCHARGING = 3;
+      const uint8 STATUS_BOOTING = 4;
+    };
+    @verbatim (language="comment", text=
+      "Status")
+    struct BatteryState {
+      std_msgs::msg::Header header;
+
+      string identifier;
+
+      double charge_percentage;
+
+      double current;
+
+      double voltage;
+
+      sequence<double> temperatures;
+
+      uint8 status;
+    };
+  };
+};

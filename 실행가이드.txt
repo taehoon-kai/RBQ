@@ -1,6 +1,13 @@
 #gui 실행 
 ./RBQGUI-x86_64.AppImage 
 
+
+cd ~/RBQ
+export CYCLONEDDS_URI=file://$PWD/configs/cyclonedds_ros2.xml
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+source /opt/ros/humble/setup.bash
+source ros2/install/setup.bash
+
 python3 Downloads/qr_screen_navigate.py --monitor 1  --max-distance 0.2
 
 

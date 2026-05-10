@@ -1,0 +1,1 @@
+/home/rbq/rbq_ws/ros2/build/rbq_examples/ament_cmake_environment_hooks/local_setup.zsh

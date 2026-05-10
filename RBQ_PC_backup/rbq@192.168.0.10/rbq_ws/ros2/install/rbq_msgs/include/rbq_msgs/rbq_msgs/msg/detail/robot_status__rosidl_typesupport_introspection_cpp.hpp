@@ -1,0 +1,1 @@
+/home/rbq/rbq_ws/ros2/build/rbq_msgs/rosidl_typesupport_introspection_cpp/rbq_msgs/msg/detail/robot_status__rosidl_typesupport_introspection_cpp.hpp

@@ -1,0 +1,12 @@
+setup.py
+rbq_msgs/__init__.py
+rbq_msgs.egg-info/PKG-INFO
+rbq_msgs.egg-info/SOURCES.txt
+rbq_msgs.egg-info/dependency_links.txt
+rbq_msgs.egg-info/top_level.txt
+rbq_msgs/msg/__init__.py
+rbq_msgs/msg/_battery_state.py
+rbq_msgs/msg/_foot_states.py
+rbq_msgs/msg/_high_level_command.py
+rbq_msgs/msg/_joint_status.py
+rbq_msgs/msg/_robot_status.py
